@@ -78,7 +78,7 @@ nav img {
 /* ======== Responsividade menu ======== */
 @media (max-width: 768px) {
   #hero {
-        background-image: url("banner01.jpg"); /* imagem diferente */
+        background-image: url("banner01.webp"); /* imagem diferente */
         background-attachment: scroll; /* opcional: remove o efeito fixo no mobile */
     }
 }
