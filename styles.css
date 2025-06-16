@@ -1,0 +1,294 @@
+/* ======== Estilos globais ======== */
+body {
+  background: radial-gradient(circle at 0% 0%, #000f9b, #eb0000, #a000eb);
+  color: #eee;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+a:hover {
+  color: #93c5fd;
+}
+
+/* ======== Cabeçalho e menu ======== */
+.main-header {
+  background-color: rgba(20, 20, 40, 0.9);
+  padding: 20px;
+  position: relative;
+  z-index: 1000;
+}
+nav.na {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-links a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #eee;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+.nav-links a:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+#hero {
+    
+   display: flex;
+   font-size: 20px;
+    justify-content: center;
+    background-color: rgb(164, 96, 2);
+    height: 500px;
+    background-image: url("banner02.webp");
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition:  background-color 0.3s;
+}
+
+/* Botão hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* ======== Responsividade menu ======== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(20, 20, 40, 0.95);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 180px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* ======== Benefícios ======== */
+#beneficios {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+#beneficios h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #54f515;
+}
+.beneficios-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.beneficios {
+  background-color: rgba(20, 20, 40, 0.8);
+  border: 1px solid #444;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.6);
+  border-radius: 7px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  transition: background-color 0.8s, color 0.8s;
+}
+.beneficios i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #60a5fa;
+  transition: color 0.8s;
+}
+.beneficios p {
+  font-weight: 600;
+  font-size: 16px;
+  color: #eee;
+  margin: 0;
+}
+.beneficios:hover {
+  background-color: #2563eb;
+  color: white;
+}
+.beneficios:hover i {
+  color: white;
+}
+
+/* ======== Depoimentos (carrossel) ======== */
+#depoimentos {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(20, 20, 40, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.6);
+}
+#depoimentos h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #54f515;
+}
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+  min-height: 120px;
+}
+.testimonial.active {
+  display: block;
+}
+.testimonial-author {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #60a5fa;
+}
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+.testimonial-nav button {
+  background-color: #1e40af;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.testimonial-nav button:hover {
+  background-color: #2563eb;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  display: block;
+  border: 2px solid #60a5fa;
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.7);
+}
+
+/* ======== Formulário ======== */
+#formulario {
+  max-width: 500px;
+  background-color: rgba(20, 20, 40, 0.85);
+  padding: 30px 35px;
+  border-radius: 8px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.6);
+}
+#formulario h2 {
+  color: #54f515;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+#lead-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #eee;
+  font-weight: 600;
+}
+#lead-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1c1c2e;
+  color: #eee;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#lead-form input:focus {
+  border-color: #60a5fa;
+  background-color: #262646;
+}
+#lead-form button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#lead-form button:hover {
+  background-color: #3b82f6;
+}
+#mensagem-erro {
+  color: #ff5555;
+  font-weight: 700;
+  margin-bottom: 15px;
+  min-height: 20px;
+  text-align: center;
+}
+
+/* ======== Rodapé ======== */
+.site-footer {
+  background-color: rgba(20, 20, 40, 0.95);
+  padding: 30px 20px;
+  text-align: center;
+  color: #eee;
+  margin-top: 80px;
+}
+.site-footer .social-icons a {
+  color: #eee;
+  margin: 0 12px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+.site-footer .social-icons a:hover {
+  color: #60a5fa;
+}
